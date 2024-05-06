@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech-To-Color</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    
+
+    #container{
+      margin: auto;
+      max-width: 600px;
+    }
+    #card{
+      max-width:500px ;
+      background-color: blueviolet;
+      padding:20px ;
+      text-align: center;
+      height: 100%;
+      border-radius:30px ;
+      
+    
+    }
+    #color-display {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: inline-block;
+    
+    
+  
+   }
+  input:active{
+    border: none;
+  }
+
+  .error i{
+    color: red;
+  }
+
+  .error{
+    color: #ccc;
+    border:1px red solid ;
+    width: 200px;
+    margin: auto;
+    padding:8px ;
+  }
+  #speak i{
+    color: green;
+  }
+  .green{
+    color:chartreuse;
+
+  }
+  .red{
+    color: red;
+  }
+  .blue{
+    color: blue;
+  }
+  .pink{
+    color:darkgreen;
+  }
+  .animation{
+    animation: animate 2s infinite ;
+  }
+   @keyframes animate {
+    to{
+      width:300px;
+    }
+   }
+   @media screen and (max-width:600px){
+    #card{
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    input,
+    button{
+      margin-top:10px ;
+      padding-left:8px ;
+
+    }
+
+     .section{
+      margin-top:150px ;
+    }
+     
+   }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="card">
+      <section class="section">
+        <h1 id="header"><span class="green">Say</span> <span class="red">A</span>  <span class="blue">Color</span>  <span class="pink">Name</span></h1>
+        <div id="color-display" class="animation"></div>
+        <div class="input">
+          <input id="speech" type="text" placeholder="Spoken Words" readonly>
+          <button id="speak">Speak <i class="fa fa-microphone"></i></button>
+        </div>
+      </section>
+    </div>
+  
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

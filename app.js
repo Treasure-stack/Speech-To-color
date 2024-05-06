@@ -20,6 +20,7 @@ recognition.onresult = event => {
     console.log(speech)
   
   } else {
+   colorDisplay.style.backgroundColor = '';
     const error = document.createElement('div')
     error.className = 'error'
     error.innerHTML = `${speech}: Not Found <i class="fa fa-exclamation-circle"></i>`
